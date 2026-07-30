@@ -6,9 +6,9 @@ import { MovieModel } from '../models/movie.js'
 
 export const moviesRouter = Router()
 
-moviesRouter.get('/', (req, res) => {
+moviesRouter.get('/', async (req, res) => {
       const { genre } = req.query
-      const movies = MovieModel.getAll({ genre })
+      const movies = await MovieModel.getAll({ genre })
       res.json(movies)
 })
 
