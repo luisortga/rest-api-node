@@ -1,0 +1,32 @@
+{
+  "name": "project-node3",
+  "version": "1.0.0",
+  "description": "Curso de node con buenas practicas",
+  "keywords": [
+    "curso",
+    "node",
+    "js",
+    "luis"
+  ],
+  "license": "ISC",
+  "author": "Luis Ortega Montero",
+  "type": "module",
+  "main": "http-two.js",
+  "scripts": {
+    "dev:1": "node --watch http-two.js",
+    "dev:2": "node --watch routing.js",
+    "dev:3": "node --watch express.js"
+  },
+  "dependencies": {
+    "cors": "2.8.6",
+    "express": "5.2.1",
+    "picocolors": "1.1.1",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "standard": "17.1.2"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
