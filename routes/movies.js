@@ -2,17 +2,13 @@ import { randomUUID } from 'node:crypto'
 import { Router } from "express"
 import movies from '../movies.json' with { type: 'json' }
 import { validateMovie, validatePartialMovie } from '../Schemas/movies.js'
+import { MovieModel } from '../models/movie.js'
 
 export const moviesRouter = Router()
 
 moviesRouter.get('/', (req, res) => {
       const { genre } = req.query
-      if (genre) {
-        const filteredMovies = movies.filter(
-          movie => movie.genre.some(g => g.toLowerCase() === genre.toLowerCase())
-        )
-        return res.json(filteredMovies)
-      }
+      const movies = MovieModel.getAll({ genre })
       res.json(movies)
 })
 
