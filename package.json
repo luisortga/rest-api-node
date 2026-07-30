@@ -11,9 +11,9 @@
   "license": "ISC",
   "author": "Luis Ortega Montero",
   "type": "module",
-  "main": "http-two.js",
+  "main": "app.js",
   "scripts": {
-    "dev:1": "node --watch http-two.js",
+    "dev:1": "node --watch app.js",
     "dev:2": "node --watch routing.js",
     "dev:3": "node --watch express.js"
   },

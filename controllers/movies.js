@@ -1,4 +1,5 @@
-import { MovieModel } from "../models/movie"
+import { MovieModel } from "../models/movie.js"
+import { validateMovie, validatePartialMovie } from '../Schemas/movies.js'
 
 export class MovieController {
     static async getAll (req, res) {
@@ -43,7 +44,7 @@ export class MovieController {
         return res.json({ message: 'Movie deleted' })
     }
 
-    static async update (res, req) {
+    static async update (req, res) {
         const result = validatePartialMovie(req.body)
 
         if (!result.success) {
@@ -54,6 +55,6 @@ export class MovieController {
   
         const updatedMovie = await MovieModel.update({ id, input: result.data })
 
-        return res.json(updatedMovie)
+    return res.json(updatedMovie)
     }
 }
