@@ -13,13 +13,12 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev:1": "node --watch app.js",
-    "dev:2": "node --watch routing.js",
-    "dev:3": "node --watch express.js",
-    "start": "node app.js"
+    "start:mysql": "node --watch server-with-mysql.js",
+    "start:local": "node --watch server-with-local.js"
   },
   "dependencies": {
     "cors": "2.8.6",
+    "dotenv": "17.4.2",
     "express": "5.2.1",
     "mongodb": "7.5.0",
     "mysql2": "3.23.2",
