@@ -22,10 +22,12 @@
     "cors": "2.8.6",
     "express": "5.2.1",
     "mongodb": "7.5.0",
+    "mysql2": "3.23.2",
     "picocolors": "1.1.1",
     "zod": "4.4.3"
   },
   "devDependencies": {
+    "eslint": "^10.8.0",
     "standard": "17.1.2"
   },
   "eslintConfig": {
